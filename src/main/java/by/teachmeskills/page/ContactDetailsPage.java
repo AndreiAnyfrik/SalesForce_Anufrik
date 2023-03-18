@@ -25,7 +25,7 @@ public class ContactDetailsPage extends BasePage {
     }
 
     public ContactDetailsPage checkContactsNamePage() {
-        driver.findElement(By.xpath(String.valueOf(lastName);
+        driver.findElement(By.xpath(String.valueOf(lastName)));
         return this;
     }
 
