@@ -1,5 +1,6 @@
 package by.teachmeskills;
 
+import by.teachmeskills.dto.Account;
 import by.teachmeskills.page.AccountDetailsPage;
 import by.teachmeskills.page.AccountsPage;
 import by.teachmeskills.page.LoginPage;
@@ -31,5 +32,16 @@ public class AccountCreationTest extends BaseTest {
         String message = accountCreationNotification.getText();
         assertThat(message).as("Notification does not contain account name")
                 .contains(accountName);
+
+        String actualAccountName = accDetailsPage.getAccountName();
+        assertThat(actualAccountName).as("").isEqualTo(accountName);
+    }
+    @Test
+    public void createAccountWithAllFields() {
+
+        Account expAccount = Account.builder()
+                .accountName(faker.name().fullName())
+                .phone(faker.phoneNumber().cellPhone())
+                .build();
     }
 }

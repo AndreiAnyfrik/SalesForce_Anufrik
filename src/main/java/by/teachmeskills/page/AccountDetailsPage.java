@@ -29,6 +29,12 @@ public class AccountDetailsPage extends BasePage {
         return this;
     }
 
+    public String getAccountName(){
+        return driver.findElement(accName).getText();
+    }
+
+
+
     public String getAccountInformation(String label) {
         return new FormattedText(driver, label).getText();
     }

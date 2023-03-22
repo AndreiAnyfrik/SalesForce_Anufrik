@@ -23,6 +23,9 @@
         <allure-maven.version>2.12.0</allure-maven.version>
         <aspectj.version>1.9.9</aspectj.version>
         <allure-testng.version>2.21.0</allure-testng.version>
+        <lombok.version>1.18.26</lombok.version>
+        <log4j2.version>2.20.0</log4j2.version>
+        <dataformat.yaml.version>2.12.3</dataformat.yaml.version>
     </properties>
 
     <dependencies>
@@ -78,14 +81,20 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.20.0</version>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!--Для считывания yaml-файлов -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${dataformat.yaml.version}</version>
         </dependency>
     </dependencies>
     <build>
